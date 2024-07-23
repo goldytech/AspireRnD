@@ -10,7 +10,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.1"/>
+        <PackageReference Include="Aspirant.Hosting" Version="0.0.4"/>
+        <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.2"/>
+        <PackageReference Include="Aspire.Hosting.PostgreSQL" Version="8.0.2"/>
+        <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="8.0.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\GraphQLApi\GraphQLApi.csproj"/>
     </ItemGroup>
 
 </Project>

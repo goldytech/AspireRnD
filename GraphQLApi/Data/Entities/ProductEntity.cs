@@ -1,8 +1,11 @@
 namespace GraphQLApi.Data.Entities;
 
-public class ProductEntity
+[GraphQLDescription("The product entity.")]
+[Node(IdField = nameof(Id))]
+public class ProductEntity 
 {
     public Guid Id { get; set; }
+    [GraphQLDescription("The name of the product.")]
     public string Name { get; set; }
     public string Description { get; set; }
     public decimal Price { get; set; }

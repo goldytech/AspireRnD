@@ -1,4 +1,5 @@
 using GraphQLApi.Data;
+using GraphQLApi.Queries;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Core.Events;
@@ -33,5 +34,15 @@ public static class Extensions
     {
         applicationBuilder.Services.AddSingleton<DatabaseSeeder>();
         applicationBuilder.Services.AddHostedService<DatabaseSeederHostedService>();
+    }
+    public static void AddGraphQlServices(this IHostApplicationBuilder applicationBuilder)
+    {
+        applicationBuilder.Services.AddGraphQLServer()
+            .AddQueryType<EShopQueries>()
+            .AddGlobalObjectIdentification()
+            .AddMongoDbFiltering()
+            .AddMongoDbSorting()
+            .AddMongoDbProjections()
+            .AddMongoDbPagingProviders();
     }
 }

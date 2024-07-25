@@ -5,8 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.AddServiceDefaults();
 builder.AddMongoDbServices();
 builder.AddDataSeedingServices();
-builder.Services.AddGraphQLServer()
-    .AddQueryType<Query>();
+builder.AddGraphQlServices();
 
 var app = builder.Build();
 

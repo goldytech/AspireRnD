@@ -7,12 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2"/>
+        <PackageReference Include="Aspire.MongoDB.Driver" Version="8.1.0"/>
         <PackageReference Include="HotChocolate.AspNetCore" Version="13.9.7"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.7">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
+        <PackageReference Include="HotChocolate.Data.MongoDb" Version="13.9.7"/>
     </ItemGroup>
 
     <ItemGroup>

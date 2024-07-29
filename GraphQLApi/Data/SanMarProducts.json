@@ -1,66 +1,289 @@
 [
   {
-    "ProductId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
-    "ProductName": "SanMar T-Shirt",
-    "ProductDetails": "A comfortable cotton t-shirt",
-    "Cost": 15.99,
+    "Id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+    "ProductName": "Basic T-Shirt",
+    "ProductDetails": "A simple and comfortable t-shirt.",
+    "Cost": 9.99,
     "ProductCategory": {
-      "CategoryId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "Id": "a1b2c3d4-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
       "CategoryName": "Apparel",
-      "CategoryDescription": "Clothing and accessories",
-      "UpdatedAt": "2023-10-01T12:00:00Z",
+      "CategoryDescription": "Clothing and accessories.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
       "IsActive": true
     },
-    "ModifiedAt": "2023-10-01T12:00:00Z",
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
     "StockQuantity": 100,
     "IsAvailable": true
   },
   {
-    "ProductId": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
-    "ProductName": "SanMar Hoodie",
-    "ProductDetails": "A warm fleece hoodie",
-    "Cost": 29.99,
+    "Id": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
+    "ProductName": "Denim Jeans",
+    "ProductDetails": "Classic denim jeans with a modern fit.",
+    "Cost": 49.99,
     "ProductCategory": {
-      "CategoryId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "Id": "b2c3d4e5-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
       "CategoryName": "Apparel",
-      "CategoryDescription": "Clothing and accessories",
-      "UpdatedAt": "2023-10-01T12:00:00Z",
+      "CategoryDescription": "Clothing and accessories.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
       "IsActive": true
     },
-    "ModifiedAt": "2023-10-01T12:00:00Z",
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
     "StockQuantity": 50,
     "IsAvailable": true
   },
   {
-    "ProductId": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
-    "ProductName": "SanMar Jeans",
-    "ProductDetails": "Classic blue jeans",
-    "Cost": 39.99,
+    "Id": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
+    "ProductName": "Running Shoes",
+    "ProductDetails": "Lightweight running shoes for all terrains.",
+    "Cost": 79.99,
     "ProductCategory": {
-      "CategoryId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
-      "CategoryName": "Apparel",
-      "CategoryDescription": "Clothing and accessories",
-      "UpdatedAt": "2023-10-01T12:00:00Z",
+      "Id": "c3d4e5f6-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
+      "CategoryName": "Footwear",
+      "CategoryDescription": "Shoes, sandals, and other footwear.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
       "IsActive": true
     },
-    "ModifiedAt": "2023-10-01T12:00:00Z",
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
     "StockQuantity": 75,
     "IsAvailable": true
   },
   {
-    "ProductId": "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s",
-    "ProductName": "SanMar Sneakers",
-    "ProductDetails": "Comfortable running shoes",
-    "Cost": 49.99,
+    "Id": "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s",
+    "ProductName": "Winter Jacket",
+    "ProductDetails": "Warm and durable winter jacket.",
+    "Cost": 119.99,
     "ProductCategory": {
-      "CategoryId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
-      "CategoryName": "Apparel",
-      "CategoryDescription": "Clothing and accessories",
-      "UpdatedAt": "2023-10-01T12:00:00Z",
+      "Id": "d4e5f6g7-8h9i-0j1k-2l3m-4n5o6p7q8r9s",
+      "CategoryName": "Outerwear",
+      "CategoryDescription": "Jackets, coats, and other outerwear.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
       "IsActive": true
     },
-    "ModifiedAt": "2023-10-01T12:00:00Z",
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 30,
+    "IsAvailable": true
+  },
+  {
+    "Id": "5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t",
+    "ProductName": "Baseball Cap",
+    "ProductDetails": "Adjustable baseball cap with logo.",
+    "Cost": 14.99,
+    "ProductCategory": {
+      "Id": "e5f6g7h8-9i0j-1k2l-3m4n-5o6p7q8r9s0t",
+      "CategoryName": "Accessories",
+      "CategoryDescription": "Hats, bags, and other accessories.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 200,
+    "IsAvailable": true
+  },
+  {
+    "Id": "6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u",
+    "ProductName": "Yoga Pants",
+    "ProductDetails": "Comfortable and flexible yoga pants.",
+    "Cost": 29.99,
+    "ProductCategory": {
+      "Id": "f6g7h8i9-0j1k-2l3m-4n5o-6p7q8r9s0t1u",
+      "CategoryName": "Apparel",
+      "CategoryDescription": "Clothing and accessories.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 120,
+    "IsAvailable": true
+  },
+  {
+    "Id": "7g8h9i0j-1k2l-3m4n-5o6p-7q8r9s0t1u2v",
+    "ProductName": "Hiking Boots",
+    "ProductDetails": "Durable hiking boots for rough terrains.",
+    "Cost": 99.99,
+    "ProductCategory": {
+      "Id": "g7h8i9j0-1k2l-3m4n-5o6p-7q8r9s0t1u2v",
+      "CategoryName": "Footwear",
+      "CategoryDescription": "Shoes, sandals, and other footwear.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
     "StockQuantity": 60,
     "IsAvailable": true
+  },
+  {
+    "Id": "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w",
+    "ProductName": "Leather Belt",
+    "ProductDetails": "Genuine leather belt with buckle.",
+    "Cost": 24.99,
+    "ProductCategory": {
+      "Id": "h8i9j0k1-2l3m-4n5o-6p7q-8r9s0t1u2v3w",
+      "CategoryName": "Accessories",
+      "CategoryDescription": "Hats, bags, and other accessories.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 150,
+    "IsAvailable": true
+  },
+  {
+    "Id": "9i0j1k2l-3m4n-5o6p-7q8r-9s0t1u2v3w4x",
+    "ProductName": "Sunglasses",
+    "ProductDetails": "Polarized sunglasses with UV protection.",
+    "Cost": 39.99,
+    "ProductCategory": {
+      "Id": "i9j0k1l2-3m4n-5o6p-7q8r-9s0t1u2v3w4x",
+      "CategoryName": "Accessories",
+      "CategoryDescription": "Hats, bags, and other accessories.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 80,
+    "IsAvailable": true
+  },
+  {
+    "Id": "0j1k2l3m-4n5o-6p7q-8r9s-0t1u2v3w4x5y",
+    "ProductName": "Backpack",
+    "ProductDetails": "Spacious and durable backpack.",
+    "Cost": 59.99,
+    "ProductCategory": {
+      "Id": "j0k1l2m3-4n5o-6p7q-8r9s-0t1u2v3w4x5y",
+      "CategoryName": "Accessories",
+      "CategoryDescription": "Hats, bags, and other accessories.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 90,
+    "IsAvailable": true
+  },
+  {
+    "Id": "1k2l3m4n-5o6p-7q8r-9s0t-1u2v3w4x5y6z",
+    "ProductName": "Sports Watch",
+    "ProductDetails": "Water-resistant sports watch with timer.",
+    "Cost": 89.99,
+    "ProductCategory": {
+      "Id": "k1l2m3n4-5o6p-7q8r-9s0t-1u2v3w4x5y6z",
+      "CategoryName": "Accessories",
+      "CategoryDescription": "Hats, bags, and other accessories.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 70,
+    "IsAvailable": true
+  },
+  {
+    "Id": "2l3m4n5o-6p7q-8r9s-0t1u-2v3w4x5y6z7a",
+    "ProductName": "Fitness Tracker",
+    "ProductDetails": "Advanced fitness tracker with heart rate monitor.",
+    "Cost": 99.99,
+    "ProductCategory": {
+      "Id": "l2m3n4o5-6p7q-8r9s-0t1u-2v3w4x5y6z7a",
+      "CategoryName": "Electronics",
+      "CategoryDescription": "Gadgets and electronic devices.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 110,
+    "IsAvailable": true
+  },
+  {
+    "Id": "3m4n5o6p-7q8r-9s0t-1u2v-3w4x5y6z7a8b",
+    "ProductName": "Bluetooth Headphones",
+    "ProductDetails": "Wireless Bluetooth headphones with noise cancellation.",
+    "Cost": 129.99,
+    "ProductCategory": {
+      "Id": "m3n4o5p6-7q8r-9s0t-1u2v-3w4x5y6z7a8b",
+      "CategoryName": "Electronics",
+      "CategoryDescription": "Gadgets and electronic devices.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 95,
+    "IsAvailable": true
+  },
+  {
+    "Id": "4n5o6p7q-8r9s-0t1u-2v3w-4x5y6z7a8b9c",
+    "ProductName": "Smartwatch",
+    "ProductDetails": "Feature-rich smartwatch with fitness tracking.",
+    "Cost": 199.99,
+    "ProductCategory": {
+      "Id": "n4o5p6q7-8r9s-0t1u-2v3w-4x5y6z7a8b9c",
+      "CategoryName": "Electronics",
+      "CategoryDescription": "Gadgets and electronic devices.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 85,
+    "IsAvailable": true
+  },
+  {
+    "Id": "5o6p7q8r-9s0t-1u2v-3w4x-5y6z7a8b9c0d",
+    "ProductName": "Wireless Charger",
+    "ProductDetails": "Fast wireless charger for smartphones.",
+    "Cost": 39.99,
+    "ProductCategory": {
+      "Id": "o5p6q7r8-9s0t-1u2v-3w4x-5y6z7a8b9c0d",
+      "CategoryName": "Electronics",
+      "CategoryDescription": "Gadgets and electronic devices.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 130,
+    "IsAvailable": true
+  },
+  {
+    "Id": "6p7q8r9s-0t1u-2v3w-4x5y-6z7a8b9c0d1e",
+    "ProductName": "Portable Speaker",
+    "ProductDetails": "Compact and powerful portable speaker.",
+    "Cost": 49.99,
+    "ProductCategory": {
+      "Id": "p6q7r8s9-0t1u-2v3w-4x5y-6z7a8b9c0d1e",
+      "CategoryName": "Electronics",
+      "CategoryDescription": "Gadgets and electronic devices.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 140,
+    "IsAvailable": true
+  },
+  {
+    "Id": "7q8r9s0t-1u2v-3w4x-5y6z-7a8b9c0d1e2f",
+    "ProductName": "Digital Camera",
+    "ProductDetails": "High-resolution digital camera with optical zoom.",
+    "Cost": 299.99,
+    "ProductCategory": {
+      "Id": "q7r8s9t0-1u2v-3w4x-5y6z-7a8b9c0d1e2f",
+      "CategoryName": "Electronics",
+      "CategoryDescription": "Gadgets and electronic devices.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 50,
+    "IsAvailable": true
+  },
+  {
+    "Id": "8r9s0t1u-2v3w-4x5y-6z7a-8b9c0d1e2f3g",
+    "ProductName": "Gaming Mouse",
+    "ProductDetails": "Ergonomic gaming mouse with customizable buttons.",
+    "Cost": 59.99,
+    "ProductCategory": {
+      "Id": "r8s9t0u1-2v3w-4x5y-6z7a-8b9c0d1e2f3g",
+      "CategoryName": "Electronics",
+      "CategoryDescription": "Gadgets and electronic devices.",
+      "UpdatedAt": "2024-07-29T16:34:23.3061210Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2024-07-29T16:34:23.3061210Z",
+    "StockQuantity": 100,
+    "IsAvailable": true
   }]
-  

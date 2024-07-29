@@ -1,9 +1,9 @@
 namespace GraphQLApi.Data.Entities;
 
-[Node(IdField = nameof(ProductId))]
+[Node(IdField = nameof(Id))]
 public class SanMarProduct
 {
-    public string ProductId { get; set; }
+    public string Id { get; set; }
     public string ProductName { get; set; }
     public string ProductDetails { get; set; }
     public decimal Cost { get; set; }

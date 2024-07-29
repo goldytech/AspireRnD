@@ -11,16 +11,16 @@ public class EShopQueries(IMongoDatabase database)
     [UseProjection]
     [UseSorting]
     [UseFiltering]
-    public  IExecutable<ProductEntity>? GetProducts()
+    public  IExecutable<AlphaBroderProduct>? GetProducts()
     {
-        var productCollection = database.GetCollection<ProductEntity>("Products");
+        var productCollection = database.GetCollection<AlphaBroderProduct>("Products");
         return productCollection.AsExecutable();
     }
     
     [UseFirstOrDefault]
-    public IExecutable<ProductEntity> GetProductById(Guid id)
+    public IExecutable<AlphaBroderProduct> GetProductById(string id)
     {
-        var productCollection = database.GetCollection<ProductEntity>("Products");
+        var productCollection = database.GetCollection<AlphaBroderProduct>("Products");
         return productCollection.Find(x=>x.Id == id).AsExecutable();
     }
 }

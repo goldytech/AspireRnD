@@ -3,7 +3,9 @@ using Projects;
 
 var builder = DistributedApplication.CreateBuilder(args);
 
-var mongo = builder.AddMongoDB("mongo");
+var mongo = builder.AddMongoDB("mongo")
+    .WithDataVolume("mongo-data");
+    
 var mongoDb = mongo.AddDatabase("graphql-db");
 
 var graphqlApi = builder.AddProject<GraphQLApi>("graphql-api")

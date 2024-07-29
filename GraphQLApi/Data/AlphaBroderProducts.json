@@ -1,0 +1,210 @@
+[
+  {
+    "Id": "d1e8f8a2-3b4c-4d5e-8f6a-1a2b3c4d5e6f",
+    "Name": "Classic T-Shirt",
+    "Description": "A comfortable and stylish classic t-shirt.",
+    "Price": 19.99,
+    "AlphaBroderCategory": {
+      "Id": "a1b2c3d4-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "Name": "Apparel",
+      "Description": "Clothing and accessories.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "e2f3g4h5-6i7j-8k9l-0m1n-2o3p4q5r6s7t",
+    "Name": "Sports Cap",
+    "Description": "A lightweight and breathable sports cap.",
+    "Price": 14.99,
+    "AlphaBroderCategory": {
+      "Id": "b2c3d4e5-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
+      "Name": "Accessories",
+      "Description": "Hats, bags, and other accessories.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "f3g4h5i6-7j8k-9l0m-1n2o-3p4q5r6s7t8u",
+    "Name": "Running Shoes",
+    "Description": "High-performance running shoes for all terrains.",
+    "Price": 89.99,
+    "AlphaBroderCategory": {
+      "Id": "c3d4e5f6-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
+      "Name": "Footwear",
+      "Description": "Shoes, sandals, and other footwear.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "g4h5i6j7-8k9l-0m1n-2o3p-4q5r6s7t8u9v",
+    "Name": "Yoga Pants",
+    "Description": "Comfortable and flexible yoga pants.",
+    "Price": 29.99,
+    "AlphaBroderCategory": {
+      "Id": "d4e5f6g7-8h9i-0j1k-2l3m-4n5o6p7q8r9s",
+      "Name": "Apparel",
+      "Description": "Clothing and accessories.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "h5i6j7k8-9l0m-1n2o-3p4q-5r6s7t8u9v0w",
+    "Name": "Winter Jacket",
+    "Description": "Warm and durable winter jacket.",
+    "Price": 119.99,
+    "AlphaBroderCategory": {
+      "Id": "e5f6g7h8-9i0j-1k2l-3m4n-5o6p7q8r9s0t",
+      "Name": "Outerwear",
+      "Description": "Jackets, coats, and other outerwear.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "i6j7k8l9-0m1n-2o3p-4q5r-6s7t8u9v0w1x",
+    "Name": "Baseball Glove",
+    "Description": "Professional-grade baseball glove.",
+    "Price": 49.99,
+    "AlphaBroderCategory": {
+      "Id": "f6g7h8i9-0j1k-2l3m-4n5o-6p7q8r9s0t1u",
+      "Name": "Sports Equipment",
+      "Description": "Equipment for various sports.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "j7k8l9m0-1n2o-3p4q-5r6s-7t8u9v0w1x2y",
+    "Name": "Hiking Backpack",
+    "Description": "Durable and spacious hiking backpack.",
+    "Price": 79.99,
+    "AlphaBroderCategory": {
+      "Id": "g7h8i9j0-1k2l-3m4n-5o6p-7q8r9s0t1u2v",
+      "Name": "Accessories",
+      "Description": "Hats, bags, and other accessories.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "k8l9m0n1-2o3p-4q5r-6s7t-8u9v0w1x2y3z",
+    "Name": "Cycling Helmet",
+    "Description": "Lightweight and protective cycling helmet.",
+    "Price": 59.99,
+    "AlphaBroderCategory": {
+      "Id": "h8i9j0k1-2l3m-4n5o-6p7q-8r9s0t1u2v3w",
+      "Name": "Sports Equipment",
+      "Description": "Equipment for various sports.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "l9m0n1o2-3p4q-5r6s-7t8u-9v0w1x2y3z4a",
+    "Name": "Golf Clubs Set",
+    "Description": "Complete set of golf clubs for all levels.",
+    "Price": 299.99,
+    "AlphaBroderCategory": {
+      "Id": "i9j0k1l2-3m4n-5o6p-7q8r-9s0t1u2v3w4x",
+      "Name": "Sports Equipment",
+      "Description": "Equipment for various sports.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "m0n1o2p3-4q5r-6s7t-8u9v-0w1x2y3z4a5b",
+    "Name": "Fitness Tracker",
+    "Description": "Advanced fitness tracker with heart rate monitor.",
+    "Price": 99.99,
+    "AlphaBroderCategory": {
+      "Id": "j0k1l2m3-4n5o-6p7q-8r9s-0t1u2v3w4x5y",
+      "Name": "Electronics",
+      "Description": "Gadgets and electronic devices.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "n1o2p3q4-5r6s-7t8u-9v0w-1x2y3z4a5b6c",
+    "Name": "Bluetooth Headphones",
+    "Description": "Wireless Bluetooth headphones with noise cancellation.",
+    "Price": 129.99,
+    "AlphaBroderCategory": {
+      "Id": "k1l2m3n4-5o6p-7q8r-9s0t-1u2v3w4x5y6z",
+      "Name": "Electronics",
+      "Description": "Gadgets and electronic devices.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "o2p3q4r5-6s7t-8u9v-0w1x-2y3z4a5b6c7d",
+    "Name": "Smartwatch",
+    "Description": "Feature-rich smartwatch with fitness tracking.",
+    "Price": 199.99,
+    "AlphaBroderCategory": {
+      "Id": "l2m3n4o5-6p7q-8r9s-0t1u-2v3w4x5y6z7a",
+      "Name": "Electronics",
+      "Description": "Gadgets and electronic devices.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "p3q4r5s6-7t8u-9v0w-1x2y-3z4a5b6c7d8e",
+    "Name": "Wireless Charger",
+    "Description": "Fast wireless charger for smartphones.",
+    "Price": 39.99,
+    "AlphaBroderCategory": {
+      "Id": "m3n4o5p6-7q8r-9s0t-1u2v-3w4x5y6z7a8b",
+      "Name": "Electronics",
+      "Description": "Gadgets and electronic devices.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "q4r5s6t7-8u9v-0w1x-2y3z-4a5b6c7d8e9f",
+    "Name": "Portable Speaker",
+    "Description": "Compact and powerful portable speaker.",
+    "Price": 49.99,
+    "AlphaBroderCategory": {
+      "Id": "n4o5p6q7-8r9s-0t1u-2v3w-4x5y6z7a8b9c",
+      "Name": "Electronics",
+      "Description": "Gadgets and electronic devices.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "r5s6t7u8-9v0w-1x2y-3z4a-5b6c7d8e9f0g",
+    "Name": "Digital Camera",
+    "Description": "High-resolution digital camera with optical zoom.",
+    "Price": 299.99,
+    "AlphaBroderCategory": {
+      "Id": "o5p6q7r8-9s0t-1u2v-3w4x-5y6z7a8b9c0d",
+      "Name": "Electronics",
+      "Description": "Gadgets and electronic devices.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  },
+  {
+    "Id": "s6t7u8v9-0w1x-2y3z-4a5b-6c7d8e9f0g1h",
+    "Name": "Gaming Mouse",
+    "Description": "Ergonomic gaming mouse with customizable buttons.",
+    "Price": 59.99,
+    "AlphaBroderCategory": {
+      "Id": "p6q7r8s9-0t1u-2v3w-4x5y-6z7a8b9c0d1e",
+      "Name": "Electronics",
+      "Description": "Gadgets and electronic devices.",
+      "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+    },
+    "LastModifiedAt": "2024-07-29T16:34:23.3061210Z"
+  }
+]

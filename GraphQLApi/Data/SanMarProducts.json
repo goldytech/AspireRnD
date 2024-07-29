@@ -1,0 +1,66 @@
+[
+  {
+    "ProductId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+    "ProductName": "SanMar T-Shirt",
+    "ProductDetails": "A comfortable cotton t-shirt",
+    "Cost": 15.99,
+    "ProductCategory": {
+      "CategoryId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "CategoryName": "Apparel",
+      "CategoryDescription": "Clothing and accessories",
+      "UpdatedAt": "2023-10-01T12:00:00Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2023-10-01T12:00:00Z",
+    "StockQuantity": 100,
+    "IsAvailable": true
+  },
+  {
+    "ProductId": "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
+    "ProductName": "SanMar Hoodie",
+    "ProductDetails": "A warm fleece hoodie",
+    "Cost": 29.99,
+    "ProductCategory": {
+      "CategoryId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "CategoryName": "Apparel",
+      "CategoryDescription": "Clothing and accessories",
+      "UpdatedAt": "2023-10-01T12:00:00Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2023-10-01T12:00:00Z",
+    "StockQuantity": 50,
+    "IsAvailable": true
+  },
+  {
+    "ProductId": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
+    "ProductName": "SanMar Jeans",
+    "ProductDetails": "Classic blue jeans",
+    "Cost": 39.99,
+    "ProductCategory": {
+      "CategoryId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "CategoryName": "Apparel",
+      "CategoryDescription": "Clothing and accessories",
+      "UpdatedAt": "2023-10-01T12:00:00Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2023-10-01T12:00:00Z",
+    "StockQuantity": 75,
+    "IsAvailable": true
+  },
+  {
+    "ProductId": "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s",
+    "ProductName": "SanMar Sneakers",
+    "ProductDetails": "Comfortable running shoes",
+    "Cost": 49.99,
+    "ProductCategory": {
+      "CategoryId": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+      "CategoryName": "Apparel",
+      "CategoryDescription": "Clothing and accessories",
+      "UpdatedAt": "2023-10-01T12:00:00Z",
+      "IsActive": true
+    },
+    "ModifiedAt": "2023-10-01T12:00:00Z",
+    "StockQuantity": 60,
+    "IsAvailable": true
+  }]
+  

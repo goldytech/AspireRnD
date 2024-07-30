@@ -10,5 +10,7 @@ var mongoDb = mongo.AddDatabase("graphql-db");
 
 var graphqlApi = builder.AddProject<GraphQLApi>("graphql-api")
     .WithReference(mongoDb)
-    .WaitFor(mongoDb);
+    .WaitFor(mongoDb)
+    .WithEnvironment("SIGNING_KEY", "supersecret")
+    .WithSwaggerUI();
 builder.Build().Run();

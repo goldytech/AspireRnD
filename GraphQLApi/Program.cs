@@ -7,8 +7,9 @@ builder.AddServiceDefaults();
 builder.AddSwaggerSupport();
 builder.AddMongoDbServices();
 builder.AddDataSeedingServices();
+builder.AddAuthenticationServices();
+builder.AddAuthorizationServices();
 builder.AddGraphQlServices();
-
 builder.Services.AddEndpoints(typeof(Program).Assembly);
 var app = builder.Build();
 
@@ -21,6 +22,9 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
 }
+
+app.UseAuthentication();
+app.UseAuthorization();
 app.MapGroupEndpoints(authversionGroup);
 app.MapGraphQL();
 

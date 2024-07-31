@@ -1,3 +1,5 @@
+using HotChocolate.Authorization;
+
 namespace GraphQLApi.Data.Entities;
 
 public class SanMarCategory

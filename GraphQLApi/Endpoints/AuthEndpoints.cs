@@ -15,13 +15,18 @@ public class AuthEndpoints :IEndpoint
             switch (tokenRequestDto)
             {
                 // Validations Omitted
-                case { Username: "alpha", Password: "alpha" }:
+                case { Username: "t1", Password: "secret" }:
                 {
                     // Generate a JWT Token and return it
                     var token = GenerateJwtToken(tokenRequestDto.Username);
                     return Results.Ok(token);
                 }
-                case {Username:"sanmar", Password:"sanmar"}:
+                case {Username:"t2", Password:"secret"}:
+                {
+                    var token = GenerateJwtToken(tokenRequestDto.Username);
+                    return Results.Ok(token);
+                }
+                case {Username:"t3", Password:"secret"}:
                 {
                     var token = GenerateJwtToken(tokenRequestDto.Username);
                     return Results.Ok(token);
@@ -38,20 +43,21 @@ public class AuthEndpoints :IEndpoint
         var key = Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("SIGNING_KEY")!.ToArray());
         var tenantId = username switch
         {
-            "alpha" => 123,
-            "sanmar" => 456,
+            "t1" => 123,
+            "t2" => 456,
+            "t3" => 789,
             _ => 0
         };
 
         var tokenDescriptor = new SecurityTokenDescriptor
         {
-            Subject = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, username) }),
-            Claims = new Dictionary<string, object>
+            Subject = new ClaimsIdentity(new[]
             {
-                {"TenantId", tenantId}
-            },
-            
-            
+                new Claim(ClaimTypes.Name, username),
+                new Claim("TenantId", tenantId.ToString())
+            }),
+            Audience = Environment.GetEnvironmentVariable("AUDIENCE"), //Intended Recipient of the Token
+            Issuer = Environment.GetEnvironmentVariable("ISSUER"), // Issuer of the Token
             Expires = DateTime.UtcNow.AddHours(1),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };

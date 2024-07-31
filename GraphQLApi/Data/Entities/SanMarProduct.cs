@@ -1,6 +1,9 @@
+using HotChocolate.Authorization;
+
 namespace GraphQLApi.Data.Entities;
 
 [Node(IdField = nameof(Id))]
+[Authorize]
 public class SanMarProduct
 {
     public string Id { get; set; }

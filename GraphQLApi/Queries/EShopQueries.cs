@@ -1,5 +1,7 @@
+using System.Security.Claims;
 using GraphQLApi.Data.Entities;
 using GraphQLApi.Utils;
+using HotChocolate.Authorization;
 using HotChocolate.Data;
 using MongoDB.Driver;
 
@@ -59,4 +61,20 @@ public class EShopQueries(IMongoDatabase database, ILogger<EShopQueries> logger)
         var productCollection = database.GetCollection<SanMarProduct>("SanMarProducts");
         return productCollection.Find(x=>x.Id == id).AsExecutable();
     }
+    public User GetMe(ClaimsPrincipal claimsPrincipal)
+    {
+        return new User
+        {
+            Username = claimsPrincipal.Identity!.Name,
+            Claims = claimsPrincipal.Claims.Select(x => x.Value).ToList()
+            
+        };
+    }
+}
+
+[Authorize]
+public class User
+{
+    public string? Username { get; set; }
+    public List<string> Claims { get; set; } = new();
 }

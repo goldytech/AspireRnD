@@ -1,7 +1,10 @@
+using HotChocolate.Authorization;
+
 namespace GraphQLApi.Data.Entities;
 
 [GraphQLDescription("The product entity of AlphaBroder.")]
 [Node(IdField = nameof(Id))]
+[Authorize(Policy = "AlphaTenantsPolicy")]
 public class AlphaBroderProduct 
 {
     public string Id { get; set; }

@@ -18,6 +18,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\GraphQLApi\GraphQLApi.csproj"/>
+        <ProjectReference Include="..\GraphQLDotNetClient\GraphQLDotNetClient.csproj" />
     </ItemGroup>
 
     <ItemGroup>

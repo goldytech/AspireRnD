@@ -1,0 +1,15 @@
+query alphaborder {
+    alphaBroderProducts {
+        nodes {
+            alphaBroderCategory {
+                description
+                id
+                lastModifiedAt
+                name
+            }
+            description
+            name
+            price
+        }
+    }
+}

@@ -15,4 +15,9 @@ var graphqlApi = builder.AddProject<GraphQLApi>("graphql-api")
     .WithEnvironment("AUDIENCE", "https://localhost:7006")
     .WithEnvironment("ISSUER", "https://localhost:7006")
     .WithSwaggerUI();
+
+var graphqlDotNetClient = builder.AddProject<GraphQLDotNetClient>("graphql-dotnet-client")
+    .WithReference(graphqlApi)
+    .WaitFor(graphqlApi);
+
 builder.Build().Run();

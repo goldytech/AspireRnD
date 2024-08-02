@@ -12,7 +12,7 @@ var graphqlApi = builder.AddProject<GraphQLApi>("graphql-api")
     .WithReference(mongoDb)
     .WaitFor(mongoDb)
     .WithEnvironment("SIGNING_KEY", "bXlTdXBlclNlY3VyZVNlY3JldEtleU5ldmVyU2hhcmU=")
-    .WithEnvironment("AUDIENCE", "https://localhost:7006")
+    .WithEnvironment("AUDIENCE", "http://localhost:5000")
     .WithEnvironment("ISSUER", "https://localhost:7006")
     .WithSwaggerUI();
 

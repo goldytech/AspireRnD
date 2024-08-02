@@ -1,21 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
-
+﻿using GraphQLDotNetClient;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-
-var builder = WebApplication.CreateBuilder(args);
-builder.AddServiceDefaults();
-
-builder.Services.AddGraphQlClient().ConfigureHttpClient(client =>
+public class Program
 {
-  client.  
-})
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
+        builder.AddServiceDefaults();
+        var startup = new Startup();
+        startup.ConfigureServices(builder.Services);
 
+        var app = builder.Build();
+        startup.Configure(app);
 
-
-
-
-Console.WriteLine("Hello, World!");
-Console.ReadLine();
+        app.Run();
+    }
+}

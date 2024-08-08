@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json.schemastore.org/aspire-8.0.json",
+  "resources": {
+    "mongo": {
+      "type": "container.v0",
+      "connectionString": "mongodb://{mongo.bindings.tcp.host}:{mongo.bindings.tcp.port}",
+      "image": "docker.io/library/mongo:7.0",
+      "volumes": [
+        {
+          "name": "mongo-data",
+          "target": "/data/db",
+          "readOnly": false
+        }
+      ],
+      "bindings": {
+        "tcp": {
+          "scheme": "tcp",
+          "protocol": "tcp",
+          "transport": "tcp",
+          "targetPort": 27017
+        }
+      }
+    },
+    "graphql-db": {
+      "type": "value.v0",
+      "connectionString": "{mongo.connectionString}/graphql-db"
+    },
+    "graphql-api": {
+      "type": "project.v0",
+      "path": "GraphQLApi/GraphQLApi.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "ASPNETCORE_FORWARDEDHEADERS_ENABLED": "true",
+        "HTTP_PORTS": "{graphql-api.bindings.http.targetPort}",
+        "ConnectionStrings__graphql-db": "{graphql-db.connectionString}",
+        "SIGNING_KEY": "bXlTdXBlclNlY3VyZVNlY3JldEtleU5ldmVyU2hhcmU=",
+        "AUDIENCE": "http://localhost:5000",
+        "ISSUER": "https://localhost:7006"
+      },
+      "bindings": {
+        "http": {
+          "scheme": "http",
+          "protocol": "tcp",
+          "transport": "http"
+        },
+        "https": {
+          "scheme": "https",
+          "protocol": "tcp",
+          "transport": "http"
+        }
+      }
+    },
+    "graphql-dotnet-client": {
+      "type": "project.v0",
+      "path": "GraphQLDotNetClient/GraphQLDotNetClient.csproj",
+      "env": {
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EXCEPTION_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_EMIT_EVENT_LOG_ATTRIBUTES": "true",
+        "OTEL_DOTNET_EXPERIMENTAL_OTLP_RETRY": "in_memory",
+        "services__graphql-api__http__0": "{graphql-api.bindings.http.url}",
+        "services__graphql-api__https__0": "{graphql-api.bindings.https.url}"
+      }
+    },
+    "graphql-ts-client": {
+      "type": "dockerfile.v0",
+      "path": "GraphQLTSClient/Dockerfile",
+      "context": "GraphQLTSClient",
+      "env": {
+        "NODE_ENV": "development",
+        "services__graphql-api__http__0": "{graphql-api.bindings.http.url}",
+        "services__graphql-api__https__0": "{graphql-api.bindings.https.url}"
+      }
+    }
+  }
+}

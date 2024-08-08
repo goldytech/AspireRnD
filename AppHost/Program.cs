@@ -20,4 +20,9 @@ var graphqlDotNetClient = builder.AddProject<GraphQLDotNetClient>("graphql-dotne
     .WithReference(graphqlApi)
     .WaitFor(graphqlApi);
 
+var graphqlTsClient = builder.AddNpmApp("graphql-ts-client", "../GraphQLTSClient", "start")
+    .WithReference(graphqlApi)
+    .WaitFor(graphqlApi)
+    .PublishAsDockerFile();
+
 builder.Build().Run();

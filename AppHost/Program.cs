@@ -20,9 +20,10 @@ var graphqlDotNetClient = builder.AddProject<GraphQLDotNetClient>("graphql-dotne
     .WithReference(graphqlApi)
     .WaitFor(graphqlApi);
 
-var graphqlTsClient = builder.AddNpmApp("graphql-ts-client", "../GraphQLTSClient", "start")
+var graphqlJsClient = builder.AddNpmApp("graphql-js-client", "../GraphQLJSClient", "start")
     .WithReference(graphqlApi)
     .WaitFor(graphqlApi)
-    .PublishAsDockerFile();
+    .WithEnvironment("NODE_TLS_REJECT_UNAUTHORIZED", "0");
+   
 
 builder.Build().Run();

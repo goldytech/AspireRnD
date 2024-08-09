@@ -13,6 +13,8 @@ public class Startup
         {
             client.BaseAddress = new Uri("https://graphql-api");
         });
+
+        services.AddTransient<AuthTokenHandler>();
         
         services.AddGraphQlClient().ConfigureHttpClient(async (provider, httpClient) =>
         {
@@ -23,11 +25,25 @@ public class Startup
             Console.WriteLine("Token: " + token);
         });
         services.AddTransient<GraphQlService>(); // Register GraphQlService
+
+        services.AddHttpClient<GraphqlHttpClient>(client =>
+        {
+            client.Timeout = TimeSpan.FromMinutes(30);
+            client.BaseAddress = new Uri("https://graphql-api");
+        }).AddHttpMessageHandler<AuthTokenHandler>();
     }
 
-    public void Configure(IApplicationBuilder app)
+    public async Task Configure(IApplicationBuilder app)
     {
-        var graphQlService = app.ApplicationServices.GetRequiredService<GraphQlService>();
-        graphQlService.ExecuteGraphQlQuery().GetAwaiter().GetResult();
+        // var graphQlService = app.ApplicationServices.GetRequiredService<GraphQlService>();
+        // graphQlService.ExecuteGraphQlQuery().GetAwaiter().GetResult();
+        
+        var graphqlHttpClient = app.ApplicationServices.GetRequiredService<GraphqlHttpClient>();
+        var response = await graphqlHttpClient.FetchAlphaBroderProductsAsync();
+        Console.WriteLine("GraphQL Query Executed");
+        foreach (var node in response?.Data?.AlphaBroderProducts.Nodes!)
+        {
+            Console.WriteLine($"- {node.Name}");
+        }
     }
 }

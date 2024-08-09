@@ -6,5 +6,5 @@ riderModule.iml
 .idea/
 *.suo
 *.user
-GraphQLTSClient/node_modules/
+GraphQLJSClient/node_modules/
 .DS_Store

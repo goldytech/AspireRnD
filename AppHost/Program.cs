@@ -24,6 +24,9 @@ var graphqlJsClient = builder.AddNpmApp("graphql-js-client", "../GraphQLJSClient
     .WithReference(graphqlApi)
     .WaitFor(graphqlApi)
     .WithEnvironment("NODE_TLS_REJECT_UNAUTHORIZED", "0");
-   
+
+var graphqlpyClient = builder.AddPythonProject("graphql-py-client", "../GraphQLPyClient","main.py")
+    .WithReference(graphqlApi)
+    .WaitFor(graphqlApi);
 
 builder.Build().Run();

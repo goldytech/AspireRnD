@@ -4,7 +4,7 @@ namespace GraphQLApi.Data.Entities;
 
 [GraphQLDescription("The product entity of AlphaBroder.")]
 [Node(IdField = nameof(Id))]
-[Authorize(Policy = "AlphaTenantsPolicy")]
+[Authorize]
 public class AlphaBroderProduct 
 {
     public string Id { get; set; }

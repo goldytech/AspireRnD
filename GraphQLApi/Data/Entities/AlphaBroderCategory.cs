@@ -1,6 +1,7 @@
 using HotChocolate.Authorization;
 
 namespace GraphQLApi.Data.Entities;
+[Authorize(Policy = "AlphaTenantsPolicy")]
 public class AlphaBroderCategory
 {
     public string Id { get; set; }

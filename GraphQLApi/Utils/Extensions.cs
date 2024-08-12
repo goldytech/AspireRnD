@@ -118,6 +118,7 @@ public static class Extensions
 
     public static void AddAuthorizationServices(this WebApplicationBuilder webApplicationBuilder)
     {
+       // webApplicationBuilder.Services.AddAuthorization();
         var allowedAlphaTenantIds = new List<string> { "123", "789" };
         webApplicationBuilder.Services.AddAuthorization(options =>
         {

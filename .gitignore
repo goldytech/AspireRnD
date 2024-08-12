@@ -8,3 +8,5 @@ riderModule.iml
 *.user
 GraphQLJSClient/node_modules/
 .DS_Store
+GraphQLPyClient/.venv
+GraphQLPyClient/.idea

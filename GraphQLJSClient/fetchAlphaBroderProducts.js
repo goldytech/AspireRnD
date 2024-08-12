@@ -5,7 +5,9 @@ import { fetchToken } from './fetchToken.js';
 const baseUrl = process.env['services__graphql-api__https__0'];
 
 export async function fetchAlphaBroderProducts(username, password) {
-  const token = await fetchToken(username, password);
+  let token = await fetchToken(username, password);
+  // remove double quotes from token
+  token = token.replace(/['"]+/g, '');
   //const token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InQxIiwiVGVuYW50SWQiOiIxMjMiLCJuYmYiOjE3MjM0NTEwMTEsImV4cCI6MTcyMzQ1NDYxMSwiaWF0IjoxNzIzNDUxMDExLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDA2IiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwNiJ9.SbKlWtS31tF48Ze2fkWDcvllburo9Ima5hIpAb5JwsA";
   console.log('Using Token:', token); // Log the token for debugging
 

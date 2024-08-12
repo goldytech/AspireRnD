@@ -15,5 +15,7 @@ export async function fetchToken(username, password) {
     })
   });
 
-  return await response.text();
+  const token = await response.text();
+  console.log('Fetched Token:', token); // Log the token for debugging
+  return token;
 }

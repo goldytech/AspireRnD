@@ -20,7 +20,7 @@ var graphqlDotNetClient = builder.AddProject<GraphQLDotNetClient>("graphql-dotne
     .WithReference(graphqlApi)
     .WaitFor(graphqlApi);
 
-var graphqlJsClient = builder.AddNpmApp("graphql-js-client", "../GraphQLJSClient", "start")
+var graphqlJsClient = builder.AddNpmApp("graphql-js-client", "../GraphQLJSClient","watch")
     .WithReference(graphqlApi)
     .WaitFor(graphqlApi)
     .WithEnvironment("NODE_TLS_REJECT_UNAUTHORIZED", "0");

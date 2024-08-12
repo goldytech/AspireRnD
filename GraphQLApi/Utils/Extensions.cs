@@ -7,6 +7,7 @@ using MongoDB.Driver;
 using MongoDB.Driver.Core.Events;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.IdentityModel.Tokens;
 
@@ -105,11 +106,11 @@ public static class Extensions
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
-                   ValidateAudience = true,
+                    ValidateAudience = false,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = issuer,
-                    ValidAudience = audience,
+                    // ValidAudience = audience,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(signingKey!))
                 };
             });
@@ -123,6 +124,7 @@ public static class Extensions
             options.AddPolicy("AlphaTenantsPolicy", policy =>
             {
                 policy.RequireAuthenticatedUser();
+              
                 policy.RequireAssertion(context =>
                 {
                     var tenantIdClaim = context.User.FindFirst("TenantId")?.Value;
@@ -132,3 +134,4 @@ public static class Extensions
         } );
     }
 }
+

@@ -1,3 +1,5 @@
+using Demo.GraphqlDotNetClient;
+
 namespace GraphQLDotNetClient;
 
 using System;
@@ -13,34 +15,39 @@ public class Startup
         {
             client.BaseAddress = new Uri("https://graphql-api");
         });
-
-        services.AddTransient<AuthTokenHandler>();
-        
-        services.AddGraphQlClient().ConfigureHttpClient(async (provider, httpClient) =>
-        {
-            httpClient.BaseAddress = new Uri("https://graphql-api/graphql");
-            var tokenHttpClient = provider.GetRequiredService<TokenHttpClient>();
-            var token = await tokenHttpClient.GetJwtTokenAsync("t1", "secret");
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-            Console.WriteLine("Token: " + token);
-        });
         services.AddTransient<GraphQlService>(); // Register GraphQlService
+        services.AddTransient<AuthTokenHandler>();
 
+        #region Strawberry Shake HttpClient Configuration
+
+        services.AddHttpClient(GraphQlClient.ClientName, client =>
+        {
+            client.BaseAddress = new Uri("https://graphql-api/graphql");
+            client.Timeout = TimeSpan.FromMinutes(30); // This is done just for debug purposes.
+        }).AddHttpMessageHandler<AuthTokenHandler>();
+        services.AddGraphQlClient();
+
+        #endregion
+
+
+        #region Normal HttpClient Configuration
         services.AddHttpClient<GraphqlHttpClient>(client =>
         {
-            client.Timeout = TimeSpan.FromMinutes(30);
+            client.Timeout = TimeSpan.FromMinutes(30); // This is done just for debug purposes.
             client.BaseAddress = new Uri("https://graphql-api");
         }).AddHttpMessageHandler<AuthTokenHandler>();
+        #endregion
     }
-
+        
     public async Task Configure(IApplicationBuilder app)
     {
-        // var graphQlService = app.ApplicationServices.GetRequiredService<GraphQlService>();
-        // graphQlService.ExecuteGraphQlQuery().GetAwaiter().GetResult();
+        var graphQlService = app.ApplicationServices.GetRequiredService<GraphQlService>();
+        
+        await graphQlService.ExecuteGraphQlQuery();
         
         var graphqlHttpClient = app.ApplicationServices.GetRequiredService<GraphqlHttpClient>();
         var response = await graphqlHttpClient.FetchAlphaBroderProductsAsync();
-        Console.WriteLine("GraphQL Query Executed");
+        Console.WriteLine("GraphQL Query Executed via normal HttpClient");
         foreach (var node in response?.Data?.AlphaBroderProducts.Nodes!)
         {
             Console.WriteLine($"- {node.Name}");

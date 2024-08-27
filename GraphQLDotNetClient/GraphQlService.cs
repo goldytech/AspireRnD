@@ -19,7 +19,7 @@ public class GraphQlService
         try
         {
             var result = await _graphQlClient.Alphaborder.ExecuteAsync();
-            Console.WriteLine("GraphQL Query Executed");
+            Console.WriteLine("GraphQL Query Executed via StrawberryShake");
             result.EnsureNoErrors();
             foreach (var resultError in result.Errors)
             {

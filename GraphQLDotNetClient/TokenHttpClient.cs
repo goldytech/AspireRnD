@@ -17,7 +17,9 @@ public class TokenHttpClient(HttpClient httpClient)
         var response = await httpClient.PostAsJsonAsync("/api/v1/auth/token", tokenRequest);
         response.EnsureSuccessStatusCode();
 
-        var token = await response.Content.ReadFromJsonAsync<string>();
+        var token = await response.Content.ReadAsStringAsync();
+        // remove quotes from token
+        token = token[1..^1];
         return token;
     }
 }
